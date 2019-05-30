@@ -198,7 +198,7 @@ volk_32fc_x2_s32f_square_dist_scalar_mult_32f_a_avx(
         float scalar, unsigned int num_points) {
   static const unsigned int work_size = 8;
   unsigned int avx_work_size = num_points / work_size * work_size;
-  int i = 0;
+  unsigned int i = 0;
 
   for (; i < avx_work_size; i += work_size) {
     lv_32fc_t src = *src0;
